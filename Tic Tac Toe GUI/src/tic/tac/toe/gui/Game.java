@@ -130,6 +130,160 @@ public class Game implements ActionListener {
     }
     public void check()
     {
+         //check x wins conditions
+        
+        if(
+                ("X".equals(button[0].getText()))&&
+                ("X".equals(button[1].getText()))&&
+                ("X".equals(button[2].getText()))
+                
+          )
+        {
+            XWins(0,1,2);
+        }
+        if(
+                ("X".equals(button[3].getText()))&&
+                ("X".equals(button[4].getText()))&&
+                ("X".equals(button[5].getText()))
+                
+          )
+        {
+            XWins(3,4,5);
+        }
+        if(
+                ("X".equals(button[6].getText()))&&
+                ("X".equals(button[7].getText()))&&
+                ("X".equals(button[8].getText()))
+                
+          )
+        {
+            XWins(6,7,8);
+        }
+        if(
+                ("X".equals(button[0].getText()))&&
+                ("X".equals(button[3].getText()))&&
+                ("X".equals(button[6].getText()))
+                
+          )
+        {
+            XWins(0,3,6);
+        }
+        if(
+                ("X".equals(button[1].getText()))&&
+                ("X".equals(button[4].getText()))&&
+                ("X".equals(button[7].getText()))
+                
+          )
+        {
+            XWins(1,4,7);
+        }if(
+                ("X".equals(button[2].getText()))&&
+                ("X".equals(button[5].getText()))&&
+                ("X".equals(button[8].getText()))
+                
+          )
+        {
+            XWins(2,5,8);
+        }
+        if(
+                ("X".equals(button[2].getText()))&&
+                ("X".equals(button[4].getText()))&&
+                ("X".equals(button[6].getText()))
+                
+          )
+        {
+            XWins(2,4,6);
+        }
+        if(
+                ("X".equals(button[0].getText()))&&
+                ("X".equals(button[4].getText()))&&
+                ("X".equals(button[8].getText()))
+                
+          )
+        {
+            XWins(0,4,8);
+        }
+        //check 0 wins conditions
+        
+        if(
+                ("O".equals(button[0].getText()))&&
+                ("O".equals(button[1].getText()))&&
+                ("O".equals(button[2].getText()))
+                
+          )
+        {
+            YWins(0,1,2);
+        }
+        if(
+                ("O".equals(button[3].getText()))&&
+                ("O".equals(button[4].getText()))&&
+                ("O".equals(button[5].getText()))
+                
+          )
+        {
+            YWins(3,4,5);
+        }
+        if(
+                ("O".equals(button[6].getText()))&&
+                ("O".equals(button[7].getText()))&&
+                ("O".equals(button[8].getText()))
+                
+          )
+        {
+            YWins(6,7,8);
+        }
+        if(
+                ("O".equals(button[0].getText()))&&
+                ("O".equals(button[3].getText()))&&
+                ("O".equals(button[6].getText()))
+                
+          )
+        {
+            YWins(0,3,6);
+        }
+        if(
+                ("O".equals(button[1].getText()))&&
+                ("O".equals(button[4].getText()))&&
+                ("O".equals(button[7].getText()))
+                
+          )
+        {
+            YWins(1,4,7);
+        }if(
+                ("O".equals(button[2].getText()))&&
+                ("O".equals(button[5].getText()))&&
+                ("O".equals(button[8].getText()))
+                
+          )
+        {
+            YWins(2,5,8);
+        }
+        if(
+                ("O".equals(button[2].getText()))&&
+                ("O".equals(button[4].getText()))&&
+                ("O".equals(button[6].getText()))
+                
+          )
+        {
+            YWins(2,4,6);
+        }
+        if(
+                ("O".equals(button[0].getText()))&&
+                ("O".equals(button[4].getText()))&&
+                ("O".equals(button[8].getText()))
+                
+          )
+        {
+            YWins(0,4,8);
+        }
+    }
+    
+    public void XWins(int a,int b,int c)
+    {
+        
+    }
+    public void YWins(int a,int b,int c)
+    {
         
     }
 }
