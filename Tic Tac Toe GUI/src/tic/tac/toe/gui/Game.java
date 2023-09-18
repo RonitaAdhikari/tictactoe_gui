@@ -4,10 +4,12 @@
  */
 package tic.tac.toe.gui;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Ronita Adhikari
  */
 public class Game {
-    
+   JFrame frame =new JFrame(); 
 }
