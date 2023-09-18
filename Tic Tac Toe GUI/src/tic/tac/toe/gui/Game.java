@@ -34,6 +34,7 @@ public class Game implements ActionListener {
    
    Game()
    {
+        winner=false;
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800,800);
         frame.getContentPane().setBackground(new Color(50,50,50));
@@ -275,6 +276,25 @@ public class Game implements ActionListener {
           )
         {
             YWins(0,4,8);
+        }
+        
+        if(
+                ("X".equals(button[0].getText()) || "O".equals(button[0].getText()))&&
+                ("X".equals(button[1].getText()) || "O".equals(button[1].getText()))&&
+                ("X".equals(button[2].getText()) || "O".equals(button[2].getText()))&&
+                ("X".equals(button[3].getText()) || "O".equals(button[3].getText()))&&
+                ("X".equals(button[4].getText()) || "O".equals(button[4].getText()))&&
+                ("X".equals(button[5].getText()) || "O".equals(button[5].getText()))&&
+                ("X".equals(button[6].getText()) || "O".equals(button[6].getText()))&&
+                ("X".equals(button[7].getText()) || "O".equals(button[7].getText()))&&
+                ("X".equals(button[8].getText()) || "O".equals(button[8].getText()))&&
+                (winner==false)
+                )
+                
+                
+                
+        {
+            text_field.setText( "Game is Draw");
         }
     }
     
