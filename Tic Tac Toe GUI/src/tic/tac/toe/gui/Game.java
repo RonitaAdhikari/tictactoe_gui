@@ -23,7 +23,7 @@ public class Game implements ActionListener {
    JFrame frame =new JFrame();
    JLabel text_field=new JLabel();
    JPanel title_panel=new JPanel();
-   JPanel buton_panel=new JPanel();
+   JPanel button_panel=new JPanel();
    JButton[] button=new JButton[9];
     boolean Player_1_turn;
     boolean winner;
@@ -68,5 +68,46 @@ public class Game implements ActionListener {
         
 //        firstTurn();
    }
-
+   @Override
+    public void actionPerformed(ActionEvent e) {
+         for(int i=0;i<9;i++)
+        {
+            if(e.getSource()==button[i])
+            {
+                if(Player_1_turn)
+                {
+                    if("".equals(button[i].getText()))
+                    {
+//                        button[i].setForeground(new Color(255,165,0));
+                        button[i].setForeground(new Color(0xf7f7f7));
+//                        button[i].setForeground(new Color(255,0,0));
+                        button[i].setText("X");
+                        Player_1_turn=false;
+                        text_field.setText("O Turn");
+                        check();
+                    }
+                }
+                else
+                {
+                    if("".equals(button[i].getText()))
+                    {
+                         button[i].setForeground(new Color(152,109,142));
+//                        button[i].setForeground(new Color(0xf7f7f7));
+//                         button[i].setForeground(new Color(0,0,255));
+                        button[i].setText("O");
+                        Player_1_turn=true;
+                        text_field.setText("X Turn");
+                        check();
+                    }
+                }
+            }
+        }
+    }
+    public void check()
+    {
+        
+    }
 }
+
+
+
