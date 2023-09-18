@@ -10,6 +10,9 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,6 +23,7 @@ import javax.swing.JPanel;
  * @author Ronita Adhikari
  */
 public class Game implements ActionListener {
+   Random random=new Random();
    JFrame frame =new JFrame();
    JLabel text_field=new JLabel();
    JPanel title_panel=new JPanel();
@@ -66,7 +70,7 @@ public class Game implements ActionListener {
         frame.add(title_panel,BorderLayout.NORTH);
         frame.add(button_panel);
         
-//        firstTurn();
+        firstTurn();
    }
    @Override
     public void actionPerformed(ActionEvent e) {
@@ -102,6 +106,27 @@ public class Game implements ActionListener {
                 }
             }
         }
+    }
+    public void firstTurn()
+    {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        if(random.nextInt(2)==0)
+        {
+            Player_1_turn=true;
+            text_field.setText("X Turn");
+            
+        }
+        else 
+        {
+            Player_1_turn=false;
+            text_field.setText("O Turn");
+        }
+        
     }
     public void check()
     {
