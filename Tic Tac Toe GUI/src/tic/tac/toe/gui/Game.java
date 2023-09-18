@@ -23,7 +23,7 @@ public class Game implements ActionListener {
    JFrame frame =new JFrame();
    JLabel text_field=new JLabel();
    JPanel title_panel=new JPanel();
-   JPanel button_panel=new JPanel();
+   JPanel buton_panel=new JPanel();
    JButton[] button=new JButton[9];
     boolean Player_1_turn;
     boolean winner;
