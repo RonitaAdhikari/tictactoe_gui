@@ -7,16 +7,26 @@ package tic.tac.toe.gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Ronita Adhikari
  */
-public class Game {
+public class Game implements ActionListener {
    JFrame frame =new JFrame();
    JLabel text_field=new JLabel();
+   JPanel title_panel=new JPanel();
+   JPanel button_panel=new JPanel();
+   JButton[] button=new JButton[9];
+    boolean Player_1_turn;
+    boolean winner;
    
    Game()
    {
@@ -35,5 +45,28 @@ public class Game {
         text_field.setText("Tic-Tac-Toe");
         text_field.setOpaque(true);
         
+        title_panel.setLayout(new BorderLayout());
+        title_panel.setBounds(0,0,800,800);
+        
+        button_panel.setLayout(new GridLayout(3,3));
+        
+        for(int i=0;i<9;i++)
+        {
+            button[i]=new JButton();
+            button_panel.add(button[i]);
+            button[i].setFont(new Font("Courier", Font.BOLD ,120));
+//            button[i].setFont(new Font("MV Boli",Font.BOLD,120));
+            button[i].setFocusable(false);
+            button[i].addActionListener(this);
+//            button[i].setBackground(new Color(130,92,121));
+            button[i].setBackground(Color.pink);
+        }
+        
+        title_panel.add(text_field);
+        frame.add(title_panel,BorderLayout.NORTH);
+        frame.add(button_panel);
+        
+//        firstTurn();
    }
+
 }
