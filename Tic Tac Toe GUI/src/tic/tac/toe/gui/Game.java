@@ -280,7 +280,16 @@ public class Game implements ActionListener {
     
     public void XWins(int a,int b,int c)
     {
+        button[a].setBackground(Color.GREEN);
+        button[b].setBackground(Color.GREEN);
+        button[c].setBackground(Color.GREEN);
         
+        for(int i=0;i<9;i++)
+        {
+            button[i].setEnabled(false);
+        }
+        text_field.setText("X Wins");
+        winner=true;
     }
     public void YWins(int a,int b,int c)
     {
